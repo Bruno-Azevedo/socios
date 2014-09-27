@@ -3,18 +3,18 @@ h1 Listing users
 table#tmembers.table.table-condensed.table-hover
   thead
     tr
-      th Name
-      th Bsc number
-      th Msc number
-      th Phd number
-      th Email
-      th Identity card
-      th Phone
-      th Address
-      th Birth date
-      th Membership
-      th Paid
-      th Responsible
+      th Nome
+      th Número Licenciado
+      th Número Mestrado
+      th Número Doutoramento
+      th E-mail
+      th Cartão de Cidadão
+      th Telemóvel
+      th Morada
+      th Data de Nascimento
+      th Número de Sócio
+      th Pago
+      th Responsável
       th
       th
       th
@@ -30,9 +30,9 @@ table#tmembers.table.table-condensed.table-hover
         td = user.identity_card
         td = user.phone
         td = user.address
-        td = user.birth_date
+        td = user.birth_date.strftime("%d %B %Y")
         td = user.membership
-        td = user.paid
+        td = user.paid ? "Sim" : "Não"
         td = user.responsible.name if user.responsible
         td = link_to 'Show', user
         td = link_to 'Edit', edit_user_path(user)
