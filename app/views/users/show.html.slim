@@ -1,0 +1,42 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @user.name
+p
+  strong Bsc number:
+  = @user.bsc_number
+p
+  strong Msc number:
+  = @user.msc_number
+p
+  strong Phd number:
+  = @user.phd_number
+p
+  strong Email:
+  = @user.email
+p
+  strong Identity card:
+  = @user.identity_card
+p
+  strong Phone:
+  = @user.phone
+p
+  strong Address:
+  = @user.address
+p
+  strong Birth date:
+  = @user.birth_date
+p
+  strong Membership:
+  = @user.membership
+p
+  strong Paid:
+  = @user.paid
+p
+  strong Responsible:
+  = @user.responsible
+
+= link_to 'Edit', edit_user_path(@user)
+'|
+= link_to 'Back', users_path

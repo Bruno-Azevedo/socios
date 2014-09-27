@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   has_many :courses, through: :enrollments, as: :student
 
   validates :name, :identity_card, :email, :phone,
-                :address, :birth_date, :membership, :responsible, :course, presence: true
+                :address, :birth_date, :membership, :responsible, presence: true
 
   validates :membership, :email, :identity_card, uniqueness: true
 end
