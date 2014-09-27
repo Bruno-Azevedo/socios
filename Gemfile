@@ -15,8 +15,6 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'therubyracer',  platforms: :ruby
 
 
-gem 'twitter-bootstrap-rails', '2.2.8'
-gem "less-rails"
 gem "font-awesome-rails"
 gem 'bootstrap-datepicker-rails'
 
@@ -38,9 +36,8 @@ gem 'devise', '~> 3.3.0'
 gem 'bcrypt', '~> 3.0'
 
 # Styles
-gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
-gem "twitter-bootstrap-rails"
-gem 'twitter-bootstrap-rails'
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
 gem 'jquery-datatables-rails', '~> 2.2.3'
 
 group :development do
