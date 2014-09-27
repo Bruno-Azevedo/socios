@@ -2,9 +2,11 @@
 = render "layouts/head"
 
 body
-  #container
+  .container
     = render "layouts/header"
     #content.selfclear.wrapper
       #main
         == yield
       = render "layouts/sidebar"
+
+  == yield :scripts

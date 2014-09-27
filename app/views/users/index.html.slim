@@ -33,7 +33,7 @@ table#tmembers.table.table-condensed.table-hover
         td = user.birth_date
         td = user.membership
         td = user.paid
-        td = user.responsible
+        td = user.responsible.name if user.responsible
         td = link_to 'Show', user
         td = link_to 'Edit', edit_user_path(user)
         td = link_to 'Destroy', user, data: {:confirm => 'Are you sure?'}, :method => :delete
@@ -42,7 +42,10 @@ br
 
 = link_to 'New User', new_user_path
 
-javascript:
-  $(document).ready(function(){
-      $('#tmembers').dataTable();
-  });
+- content_for :scripts do
+  javascript:
+    $(document).ready(function(){
+        $('#tmembers').dataTable();
+    });
+
+
