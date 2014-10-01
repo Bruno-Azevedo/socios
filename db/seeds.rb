@@ -12,10 +12,12 @@ User.create(
          msc_number: "pg25329",
          phd_number: "",
          email: "andreccdr@gmail.com",
+         password: "12312345",
+         password_confirmation: "12312345",
          identity_card:"14141834",
          phone:"919200815",
          address: "Ribeirão",
          birth_date: Time.now,
          membership: 972,
          paid: true
-         )
+         ).confirm!

@@ -5,7 +5,6 @@ class CreateUsers < ActiveRecord::Migration
       t.string :bsc_number, unique: true
       t.string :msc_number, unique: true
       t.string :phd_number, unique: true
-      t.string :email, unique: true
       t.string :identity_card
       t.string :phone
       t.string :address
